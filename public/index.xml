@@ -1,0 +1,25 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Fuzz Notes</title>
+        <link>http://localhost:1313/</link>
+        <description>Tech, IOT, Home Automation, and other ramblings</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 15 Mar 2025 00:00:00 &#43;0000</lastBuildDate>
+            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Automating my in-floor heating - wiring</title>
+    <link>http://localhost:1313/posts/iot-floor-heat-wiring/</link>
+    <pubDate>Fri, 07 Mar 2025 00:00:00 &#43;0000</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/iot-floor-heat-wiring/</guid>
+    <description><![CDATA[How to wire the Shelly 1PM to your LINE, LOAD, and SENSOR]]></description>
+</item>
+<item>
+    <title>Automating my in-floor heating - intro</title>
+    <link>http://localhost:1313/posts/iot-floor-heat-intro/</link>
+    <pubDate>Sat, 01 Mar 2025 00:00:00 &#43;0000</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/iot-floor-heat-intro/</guid>
+    <description><![CDATA[Introduction to why I replaced my floor heat thermostats and what devices I used.]]></description>
+</item>
+</channel>
+</rss>
