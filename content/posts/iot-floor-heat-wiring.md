@@ -44,3 +44,7 @@ And a picture of the add-on wiring. The black wires come from the sensor, and th
 with the `ANALOG IN`.
 
 ![Add On Wiring](add-on.png)
+
+## Next
+
+Next read about [how to run code on the Shelly 1PM](/posts/iot-floor-heat-script).

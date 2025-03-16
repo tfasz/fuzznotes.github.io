@@ -2,10 +2,26 @@
     <channel>
         <title>Fuzz Notes</title>
         <link>http://localhost:1313/</link>
-        <description>Tech, IOT, Home Automation, and other ramblings</description>
+        <description>Tech, Home Automation, and other ramblings</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 15 Mar 2025 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Automating my in-floor heating - automations</title>
+    <link>http://localhost:1313/posts/iot-floor-heat-automation/</link>
+    <pubDate>Sat, 15 Mar 2025 00:00:00 &#43;0000</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/iot-floor-heat-automation/</guid>
+    <description><![CDATA[Using Home Assistant to Publish Target Temperatures and Display Dashboards]]></description>
+</item>
+<item>
+    <title>Automating my in-floor heating - scripts</title>
+    <link>http://localhost:1313/posts/iot-floor-heat-script/</link>
+    <pubDate>Wed, 12 Mar 2025 00:00:00 &#43;0000</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/iot-floor-heat-script/</guid>
+    <description><![CDATA[How to run Javascript on the Shelly 1PM to control the temperature]]></description>
+</item>
+<item>
     <title>Automating my in-floor heating - wiring</title>
     <link>http://localhost:1313/posts/iot-floor-heat-wiring/</link>
     <pubDate>Fri, 07 Mar 2025 00:00:00 &#43;0000</pubDate>
@@ -19,7 +35,7 @@
     <pubDate>Sat, 01 Mar 2025 00:00:00 &#43;0000</pubDate>
     <author>xxxx</author>
     <guid>http://localhost:1313/posts/iot-floor-heat-intro/</guid>
-    <description><![CDATA[Introduction to why I replaced my floor heat thermostats and what devices I used.]]></description>
+    <description><![CDATA[Introduction to automating my floor heat]]></description>
 </item>
 </channel>
 </rss>

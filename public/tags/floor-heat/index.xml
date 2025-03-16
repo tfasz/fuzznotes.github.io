@@ -3,7 +3,23 @@
         <title>Floor Heat - Tag - Fuzz Notes</title>
         <link>http://localhost:1313/tags/floor-heat/</link>
         <description>Floor Heat - Tag - Fuzz Notes</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 07 Mar 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/floor-heat/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 15 Mar 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/floor-heat/" rel="self" type="application/rss+xml" /><item>
+    <title>Automating my in-floor heating - automations</title>
+    <link>http://localhost:1313/posts/iot-floor-heat-automation/</link>
+    <pubDate>Sat, 15 Mar 2025 00:00:00 &#43;0000</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/iot-floor-heat-automation/</guid>
+    <description><![CDATA[Using Home Assistant to Publish Target Temperature]]></description>
+</item>
+<item>
+    <title>Automating my in-floor heating - scripts</title>
+    <link>http://localhost:1313/posts/iot-floor-heat-script/</link>
+    <pubDate>Wed, 12 Mar 2025 00:00:00 &#43;0000</pubDate>
+    <author>xxxx</author>
+    <guid>http://localhost:1313/posts/iot-floor-heat-script/</guid>
+    <description><![CDATA[How to run Javascript on the Shelly 1PM to control the temperature]]></description>
+</item>
+<item>
     <title>Automating my in-floor heating - wiring</title>
     <link>http://localhost:1313/posts/iot-floor-heat-wiring/</link>
     <pubDate>Fri, 07 Mar 2025 00:00:00 &#43;0000</pubDate>

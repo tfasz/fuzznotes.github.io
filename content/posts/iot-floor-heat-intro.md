@@ -1,6 +1,6 @@
 +++
 title = "Automating my in-floor heating - intro"
-summary = "Introduction to why I replaced my floor heat thermostats and what devices I used."
+summary = "Introduction to automating my floor heat"
 date = 2025-03-01
 tags = ["Floor Heat", "IOT"]
 +++
@@ -49,4 +49,7 @@ by line voltage, suitable for putting in a wall box, WiFi controllable, and have
 connected to a [Shelly Plus Add-On](https://us.shelly.com/products/shelly-plus-add-on) which can be used to integrate
 with the NTC sensor.
 
-Next read about [how to wire these devices to the LINE, LOAD, and SENSOR](/posts/iot-floor-heat-wiring).
+## Next
+
+In the next post we will talk about 
+[how to wire these devices to the LINE, LOAD, and SENSOR](/posts/iot-floor-heat-wiring).

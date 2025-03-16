@@ -3,17 +3,22 @@ baseURL = "https://fuzznotes.github.io/"
 # Change the default theme to be use when building the site with Hugo
 theme = "LoveIt"
 title = "Fuzz Notes"
+subtitle = "Tech, Home Automation, and other ramblings"
+author = "Fuzz"
 languageCode = "en"
 languageName = "English"
 hasCJKLanguage = false
 
 [params]
-# site default theme ["auto", "light", "dark"]
 defaultTheme = "auto"
 fingerprint = ""
 dateFormat = "2006-01-02"
 title = "Fuzz Notes"
-description = "Tech, IOT, Home Automation, and other ramblings"
+subtitle = "Tech, Home Automation, and other ramblings"
+description = "Tech, Home Automation, and other ramblings"
+
+[params.header.title]
+name = "Fuzz Notes - Tech, Home Automation, etc"
 
 # Menu config
 [menu]
@@ -25,8 +30,21 @@ post = ""
 
 name = "Posts"
 url = "/posts/"
-# title will be shown when you hover on this menu link
-title = ""
+title = "All Posts"
+
+[[menu.main]]
+weight = 2
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+title = "Posts by Tag"
+
+[[menu.main]]
+weight = 3
+identifier = "about"
+name = "About"
+url = "/about/"
+title = "About Fuzz Notes"
 
 # Pagination config
 [pagination]
@@ -34,30 +52,16 @@ disableAliases = false
 pagerSize = 10
 path = "page"
 
-[[menu.main]]
-weight = 2
-identifier = "tags"
-pre = ""
-post = ""
-name = "Tags"
-url = "/tags/"
-title = ""
-
-[[menu.main]]
-weight = 3
-identifier = "about"
-pre = ""
-post = ""
-name = "About"
-url = "/about/"
-title = ""
-
 [params.PostAuthor]
 enable = false
 
 [params.footer]
 hugo = false
 author = false
+since = "2025"
+
+[params.home.profile]
+subtitle = "Some miscellaneous thoughts ..."
 
 [params.page.share]
 enable = false
