@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <title>Automating my in-floor heating - wiring - Fuzz Notes</title><meta name="Description" content="Tech, Home Automation, and other ramblings"><meta property="og:url" content="http://localhost:1313/posts/iot-floor-heat-wiring/">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Automating my in-floor heating - wiring · Fuzz Notes
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Fuzz">
+<meta name="description" content="How to wire the Shelly 1PM to your LINE, LOAD, and SENSOR">
+<meta name="keywords" content="iot,home automation,blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Automating my in-floor heating - wiring">
+  <meta name="twitter:description" content="How to wire the Shelly 1PM to your LINE, LOAD, and SENSOR">
+
+<meta property="og:url" content="http://localhost:1313/posts/iot-floor-heat-wiring/">
   <meta property="og:site_name" content="Fuzz Notes">
   <meta property="og:title" content="Automating my in-floor heating - wiring">
   <meta property="og:description" content="How to wire the Shelly 1PM to your LINE, LOAD, and SENSOR">
@@ -16,164 +34,270 @@
     <meta property="article:tag" content="Floor Heat">
     <meta property="article:tag" content="IOT">
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Automating my in-floor heating - wiring">
-  <meta name="twitter:description" content="How to wire the Shelly 1PM to your LINE, LOAD, and SENSOR">
-<meta name="application-name" content="My cool site">
-<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/iot-floor-heat-wiring/" /><link rel="prev" href="http://localhost:1313/posts/iot-floor-heat-intro/" /><link rel="next" href="http://localhost:1313/posts/iot-floor-heat-script/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "Automating my in-floor heating - wiring",
-        "inLanguage": "en",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/posts\/iot-floor-heat-wiring\/"
-        },"genre": "posts","keywords": "Floor Heat, IOT","wordcount":  246 ,
-        "url": "http:\/\/localhost:1313\/posts\/iot-floor-heat-wiring\/","datePublished": "2025-03-07T00:00:00+00:00","dateModified": "2025-03-07T00:00:00+00:00","publisher": {
-            "@type": "Organization",
-            "name": ""},"author": {
-                "@type": "Person",
-                "name": "xxxx"
-            },"description": ""
-    }
-    </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="Fuzz Notes">Fuzz Notes - Tech, Home Automation, etc</a>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/iot-floor-heat-wiring/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Fuzz Notes
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Posts</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/iot-floor-heat-wiring/">
+              Automating my in-floor heating - wiring
+            </a>
+          </h1>
         </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/" title="All Posts"> Posts </a><a class="menu-item" href="/tags/" title="Posts by Tag"> Tags </a><a class="menu-item" href="/about/" title="About Fuzz Notes"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a></div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-03-07T00:00:00Z">
+                March 7, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/floor-heat/">Floor Heat</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/iot/">IOT</a>
+    </span></div>
+
         </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="Fuzz Notes">Fuzz Notes - Tech, Home Automation, etc</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="All Posts">Posts</a><a class="menu-item" href="/tags/" title="Posts by Tag">Tags</a><a class="menu-item" href="/about/" title="About Fuzz Notes">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-            </a></div>
-    </div>
-</header><main class="main">
-                <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">Contents</h2>
-            <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Automating my in-floor heating - wiring</h1><div class="post-meta"><div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-03-07">2025-03-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;246 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  data-kept="">
-                <div class="details-summary toc-title">
-                    <span>Contents</span>
-                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
-                </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#wiring-diagram">Wiring Diagram</a></li>
-    <li><a href="#next">Next</a></li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><p><strong>DISCLAIMER: Please be sure you understand how to safely do wiring with line voltage or hire a professional who does.</strong></p>
-<p>Be sure to <a href="/posts/iot-floor-heat-intro" rel="">read the intro</a> before reading about wiring.</p>
-<h2 id="wiring-diagram">Wiring Diagram</h2>
+      </header>
+
+      <div class="post-content">
+        
+        <p><strong>DISCLAIMER: Please be sure you understand how to safely do wiring with line voltage or hire a professional who does.</strong></p>
+<p>Be sure to <a href="/posts/iot-floor-heat-intro" >read the intro</a> before reading about wiring.</p>
+<h2 id="wiring-diagram">
+  Wiring Diagram
+  <a class="heading-link" href="#wiring-diagram">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
 <p>Now that we have a grasp of how in-floor heating sensors work and the device we will use to turn the floor heat ON
 and OFF we can start wiring up our IOT device. The diagram below should provide the high level overview of how we
 wire electricity from the circuit breaker panel (<code>LINE</code>) to the resistive floor heating circuit (<code>LOAD</code> ). The Shelly
 Add-On is then wired to the NTC sensor via the ground (<code>GND</code>) and the voltage reading circuit.</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-">
-        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
-    </div><pre tabindex="0"><code> +----------------+
- |      LINE      |
- |  Hot   Neutral |   +---------------+-------------+
- +---+-------+----+   |     Shelly    |   Shelly    |   +------------+
-     |       |        |    Plus 1PM   |   Add-On    |   |   Sensor   |
-     |       |        +---------------+-------------+   +----+--+----+
-     |       +--------+ N             |             |        |  |
-     |                |               |         GND +--------+  |
-     |   +------------+ N             |             |           |
-     |   |            |               |   Analog IN +-----------+
-     +---|------------+ L             |             |           |
-         |            |               | VREF+R1 OUT +-----------+
-         |        +---+ O             |             |
-         |        |   +---------------+-------------+
-    +----+--------+--+
-    | Neutral    Hot |
-    |      LOAD      |
-    +----------------+</code></pre></div>
-<p>Here is a picture of the LINE and LOAD wiring.</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/posts/iot-floor-heat-wiring/line-load.png"
-        data-srcset="/posts/iot-floor-heat-wiring/line-load.png, /posts/iot-floor-heat-wiring/line-load.png 1.5x, /posts/iot-floor-heat-wiring/line-load.png 2x"
-        data-sizes="auto"
-        alt="/posts/iot-floor-heat-wiring/line-load.png"
-        title="Line and Load " width="565" height="519" /></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> +----------------+
+</span></span><span class="line"><span class="cl"> <span class="p">|</span>      LINE      <span class="p">|</span>
+</span></span><span class="line"><span class="cl"> <span class="p">|</span>  Hot   Neutral <span class="p">|</span>   +-------------+-------------+
+</span></span><span class="line"><span class="cl"> +---+-------+----+   <span class="p">|</span>    Shelly   <span class="p">|</span>   Shelly    <span class="p">|</span>   +------------+
+</span></span><span class="line"><span class="cl">     <span class="p">|</span>       <span class="p">|</span>        <span class="p">|</span>   Plus 1PM  <span class="p">|</span>   Add-On    <span class="p">|</span>   <span class="p">|</span>   Sensor   <span class="p">|</span>
+</span></span><span class="line"><span class="cl">     <span class="p">|</span>       <span class="p">|</span>        +-------------+-------------+   +----+--+----+
+</span></span><span class="line"><span class="cl">     <span class="p">|</span>       +--------+ N           <span class="p">|</span>             <span class="p">|</span>        <span class="p">|</span>  <span class="p">|</span>
+</span></span><span class="line"><span class="cl">     <span class="p">|</span>                <span class="p">|</span>             <span class="p">|</span>         GND +--------+  <span class="p">|</span>
+</span></span><span class="line"><span class="cl">     <span class="p">|</span>   +------------+ N           <span class="p">|</span>             <span class="p">|</span>           <span class="p">|</span>
+</span></span><span class="line"><span class="cl">     <span class="p">|</span>   <span class="p">|</span>            <span class="p">|</span>             <span class="p">|</span>   Analog IN +-----------+
+</span></span><span class="line"><span class="cl">     +---<span class="p">|</span>------------+ L           <span class="p">|</span>             <span class="p">|</span>           <span class="p">|</span>
+</span></span><span class="line"><span class="cl">         <span class="p">|</span>            <span class="p">|</span>             <span class="p">|</span> VREF+R1 OUT +-----------+
+</span></span><span class="line"><span class="cl">         <span class="p">|</span>        +---+ O           <span class="p">|</span>             <span class="p">|</span>
+</span></span><span class="line"><span class="cl">         <span class="p">|</span>        <span class="p">|</span>   +-------------+-------------+
+</span></span><span class="line"><span class="cl">    +----+--------+--+
+</span></span><span class="line"><span class="cl">    <span class="p">|</span> Neutral    Hot <span class="p">|</span>
+</span></span><span class="line"><span class="cl">    <span class="p">|</span>      LOAD      <span class="p">|</span>
+</span></span><span class="line"><span class="cl">    +----------------+
+</span></span></code></pre></div><p>Here is a picture of the <code>LINE</code> and <code>LOAD</code> wiring.</p>
+<p><img src="/posts/iot-floor-heat-wiring/line-load.png" alt="Line and Load "></p>
 <p>And a picture of the add-on wiring. The black wires come from the sensor, and the red wire connects the <code>VREF-R1 OUT</code>
 with the <code>ANALOG IN</code>.</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/posts/iot-floor-heat-wiring/add-on.png"
-        data-srcset="/posts/iot-floor-heat-wiring/add-on.png, /posts/iot-floor-heat-wiring/add-on.png 1.5x, /posts/iot-floor-heat-wiring/add-on.png 2x"
-        data-sizes="auto"
-        alt="/posts/iot-floor-heat-wiring/add-on.png"
-        title="Add On Wiring" width="565" height="519" /></p>
-<h2 id="next">Next</h2>
-<p>Next read about <a href="/posts/iot-floor-heat-script" rel="">how to run code on the Shelly 1PM</a>.</p>
-</div><div class="post-footer" id="post-footer">
-    <div class="post-info">
-        <div class="post-info-line">
-            <div class="post-info-mod">
-                <span>Updated on 2025-03-07</span>
-            </div></div>
-        <div class="post-info-line">
-            <div class="post-info-md"></div>
-            <div class="post-info-share">
-                <span></span>
-            </div>
-        </div>
+<p><img src="/posts/iot-floor-heat-wiring/add-on.png" alt="Add On Wiring"></p>
+<h2 id="next">
+  Next
+  <a class="heading-link" href="#next">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Next read about <a href="/posts/iot-floor-heat-script" >how to run code on the Shelly 1PM</a>.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
     </div>
 
-    <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/floor-heat/">Floor Heat</a>,&nbsp;<a href="/tags/iot/">IOT</a></section>
-        <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
-        </section>
-    </div>
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Fuzz 
+    
+  </section>
+</footer>
 
-    <div class="post-nav"><a href="/posts/iot-floor-heat-intro/" class="prev" rel="prev" title="Automating my in-floor heating - intro"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Automating my in-floor heating - intro</a>
-            <a href="/posts/iot-floor-heat-script/" class="next" rel="next" title="Automating my in-floor heating - scripts">Automating my in-floor heating - scripts<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
-</div>
-</article></div>
-            </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025</span></div>
-        </div>
-    </footer></div>
+  </main>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
-                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a>
-        </div>
+  
 
-        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
-                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
-            </a>
-        </div><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.min.js"></script></body>
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
 </html>

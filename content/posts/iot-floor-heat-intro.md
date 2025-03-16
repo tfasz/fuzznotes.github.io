@@ -7,7 +7,7 @@ tags = ["Floor Heat", "IOT"]
 
 I remember hearing [Tony Fadell](https://en.wikipedia.org/wiki/Tony_Fadell) talk about his vision of replacing
 all of the dumb white boxes around your house when he started Nest. At least he managed to do a good job with 
-the thermostat and smoke detectors before riding off into the sunset.
+the thermostat (and an ok job with smoke detectors) before riding off into the sunset.
 
 ## The problem
 
@@ -22,20 +22,22 @@ We have in-floor heating in a few of our bathrooms which were controlled by dumb
 
 Yes, there probably are some more modern implementations available that solve some of these problems but they
 usually come with their own cloud service and app. I'd prefer to be able to centrally control and manage these
-via my own [home automation system](https://www.home-assistant.io/) along with everything else in my home.
+via my own [home automation system](https://www.home-assistant.io/) along with everything else in my home. And hey - 
+it's a fun problem to solve.
 
 ## In-Floor Heat Sensors
 
-The first thing I wanted to understand was how these thermostats work.
+The first thing I wanted to understand was how these thermostats and sensors work.
 In floor heating systems typically have a sensor embedded in the floor during installation. These sensors are
 usually 10k NTC sensors (aka [Thermistors](https://en.wikipedia.org/wiki/Thermistor)) that have a varying 
-resistance at different temperatures. If you know the resistance at 3 different temperatures you can use an 
-equation to calculate the sensor's temperature at any resistance. 
+resistance at different temperatures. If you know the resistance at 3 different temperatures you can use the 
+[Steinhard-Hart equation](https://en.wikipedia.org/wiki/Steinhart%E2%80%93Hart_equation) 
+to calculate the sensor's temperature at any resistance. 
 
 I used my existing thermostat to get the floor temperature to 3 different points and then used a multi-meter to 
 test the resistance of the sensors so I could later calibrate my replacement controller. Measuring the resistance 
 is simple - just turn off the breaker to the thermostat, find the sensor wires where they attach to the thermostat, 
-detach them and measure the resistance between the two wires of the sensor.
+detach them and measure the resistance across the two wires of the sensor.
 
 ## IOT Device Choices
 

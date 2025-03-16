@@ -15,28 +15,28 @@ and OFF we can start wiring up our IOT device. The diagram below should provide 
 wire electricity from the circuit breaker panel (`LINE`) to the resistive floor heating circuit (`LOAD` ). The Shelly 
 Add-On is then wired to the NTC sensor via the ground (`GND`) and the voltage reading circuit.
 
-```
+```bash
  +----------------+
  |      LINE      |
- |  Hot   Neutral |   +---------------+-------------+
- +---+-------+----+   |     Shelly    |   Shelly    |   +------------+
-     |       |        |    Plus 1PM   |   Add-On    |   |   Sensor   |
-     |       |        +---------------+-------------+   +----+--+----+
-     |       +--------+ N             |             |        |  |
-     |                |               |         GND +--------+  |
-     |   +------------+ N             |             |           |
-     |   |            |               |   Analog IN +-----------+
-     +---|------------+ L             |             |           |
-         |            |               | VREF+R1 OUT +-----------+
-         |        +---+ O             |             |
-         |        |   +---------------+-------------+
+ |  Hot   Neutral |   +-------------+-------------+
+ +---+-------+----+   |    Shelly   |   Shelly    |   +------------+
+     |       |        |   Plus 1PM  |   Add-On    |   |   Sensor   |
+     |       |        +-------------+-------------+   +----+--+----+
+     |       +--------+ N           |             |        |  |
+     |                |             |         GND +--------+  |
+     |   +------------+ N           |             |           |
+     |   |            |             |   Analog IN +-----------+
+     +---|------------+ L           |             |           |
+         |            |             | VREF+R1 OUT +-----------+
+         |        +---+ O           |             |
+         |        |   +-------------+-------------+
     +----+--------+--+
     | Neutral    Hot |
     |      LOAD      |
     +----------------+
 ```
 
-Here is a picture of the LINE and LOAD wiring.
+Here is a picture of the `LINE` and `LOAD` wiring.
 
 ![Line and Load ](line-load.png)
 

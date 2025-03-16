@@ -1,76 +1,98 @@
-
-baseURL = "https://fuzznotes.github.io/"
-# Change the default theme to be use when building the site with Hugo
-theme = "LoveIt"
+baseURL = "https://fuzznotes.github.io"
 title = "Fuzz Notes"
-subtitle = "Tech, Home Automation, and other ramblings"
-author = "Fuzz"
+theme = "hugo-coder"
 languageCode = "en"
-languageName = "English"
-hasCJKLanguage = false
+defaultContentLanguage = "en"
+enableEmoji = true
+
+[pagination]
+pagerSize = 6
+
+[services]
+[services.disqus]
+# Enable Disqus comments
+# shortname = "yourdiscussshortname"
+
+[markup]
+[markup.highlight]
+noClasses = false
+
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
 
 [params]
-defaultTheme = "auto"
-fingerprint = ""
-dateFormat = "2006-01-02"
-title = "Fuzz Notes"
-subtitle = "Tech, Home Automation, and other ramblings"
-description = "Tech, Home Automation, and other ramblings"
+author = "Fuzz"
+# license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
+description = "Fuzz Notes"
+keywords = "iot,home automation,blog,developer,personal"
+info = ["Tech", "Home Automation"]
+#avatarURL = "images/avatar.jpg"
+#gravatar = "john.doe@example.com"
+dateFormat = "January 2, 2006"
+since = 2025
+rtl = false
+# Specify light/dark colorscheme
+# Supported values:
+# "auto" (use preference set by browser)
+# "dark" (dark background, light foreground)
+# "light" (light background, dark foreground) (default)
+colorScheme = "auto"
+# Hide the toggle button, along with the associated vertical divider
+hideColorSchemeToggle = false
+# Series see also post count
+maxSeeAlsoItems = 5
+# Custom CSS
+customCSS = []
+# Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
+customSCSS = []
+# Custom JS
+customJS = []
+# Custom remote JS files
+customRemoteJS = []
 
-[params.header.title]
-name = "Fuzz Notes - Tech, Home Automation, etc"
+# If you want to use Cloudflare Web Analytics(https://cloudflare.com) for analytics, add this section
+# [params.cloudflare]
+# token = "token"
 
-# Menu config
-[menu]
-[[menu.main]]
-weight = 1
-identifier = "posts"
-pre = ""
-post = ""
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+author = "authors"
 
-name = "Posts"
-url = "/posts/"
-title = "All Posts"
+[[params.social]]
+name = "RSS"
+icon = "fa-solid fa-rss fa-2x"
+weight = 6
+url = "https://myhugosite.com/index.xml"
+rel = "alternate"
+type = "application/rss+xml"
 
-[[menu.main]]
-weight = 2
-identifier = "tags"
-name = "Tags"
-url = "/tags/"
-title = "Posts by Tag"
+[languages.en]
+languageName = ":en:"
 
-[[menu.main]]
-weight = 3
-identifier = "about"
+[[languages.en.menu.main]]
 name = "About"
-url = "/about/"
-title = "About Fuzz Notes"
+weight = 1
+url = "about/"
 
-# Pagination config
-[pagination]
-disableAliases = false
-pagerSize = 10
-path = "page"
+[[languages.en.menu.main]]
+name = "Posts"
+weight = 2
+url = "posts/"
 
-[params.PostAuthor]
-enable = false
-
-[params.footer]
-hugo = false
-author = false
-since = "2025"
-
-[params.home.profile]
-subtitle = "Some miscellaneous thoughts ..."
-
-[params.page.share]
-enable = false
-
-# Markup related configuration in Hugo
-[markup]
-
-# Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
-[markup.highlight]
-
-# false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
-noClasses = false
+[params.giscus] # https://giscus.app
+repo = ""
+repoID = ""
+category = ""
+categoryID = ""
+mapping = ""
+term = ""
+strict = ""
+reactionsEnabled = ""
+emitMetadata = ""
+inputPosition = ""
+theme = ""
+lang = ""
+loading = ""
