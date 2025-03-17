@@ -2,6 +2,7 @@
 title = "About Fuzz Notes"
 date = 2025-03-15
 ShowBreadCrumbs = false
+comments = false
 +++
 
 I'm a software engineer, tech enthusiast, and like to spend time outside when I'm not working on projects. 
